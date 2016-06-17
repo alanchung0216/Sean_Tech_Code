@@ -16,12 +16,12 @@ interface Client {
 
 class smallClient implements Client {
 	public void printMethod(){
-		System.out.println("Hello World 1");
+		System.out.println("Hello World small client");
 	}
 }
 class bigClient implements Client {
 	public void printMethod(){
-		System.out.println("Hello World 2");
+		System.out.println("Hello World big client");
 	}
 }
 public class singleton_factory {

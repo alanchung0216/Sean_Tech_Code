@@ -11,6 +11,7 @@ Create a main() method that can receive a list of words on the command line, and
 command line to the counter.
 Print the counter’s contents to standard output.
  */
+/*
 public class CountWord {
 	int count;
 	void add(){
@@ -29,4 +30,24 @@ public class CountWord {
 		cw.print(list);
 	}
 
+}
+*/
+
+public class CountWord {
+	int count;
+	List<String> list = new ArrayList<String>();
+	void addWord(String s) {
+		list.add(s);
+		count++;
+	}
+	void print() {
+		System.out.println("word " + list + "\n count " + count);
+	}
+	public static void main(String[] args){
+		CountWord cw = new CountWord();
+		for (int i=0; i<args.length; i++){
+			cw.addWord(args[i]);
+		}
+		cw.print();
+	}
 }
